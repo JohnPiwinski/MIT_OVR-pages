@@ -1,0 +1,206 @@
+{
+  "source": "Artin Algebra 2e figure 6.6.2, sample 1 (repository history)",
+  "input_shape": [
+    323,
+    467
+  ],
+  "candidate_count": 10,
+  "selected_rank": 1,
+  "lattice": {
+    "a": [
+      118.87385376526765,
+      0.575774371150402
+    ],
+    "b": [
+      59.055509033635616,
+      60.91043105927369
+    ],
+    "horizontal_samples": 6,
+    "diagonal_samples": 6
+  },
+  "raw_projected_gap_area": 66.6766044322289,
+  "checks": {
+    "translation_cell_area": 7206.655025942711,
+    "candidate_area": 7206.779401255438,
+    "corrected_domain_area": 7206.655025942706,
+    "gap_area": 0.0,
+    "overlap_area": 0,
+    "correction_symmetric_difference_area": 133.47758417718728,
+    "correction_percent_of_cell": 1.8521433827023919,
+    "components": 1,
+    "tolerance_area": 7.206655025942712e-05,
+    "passes_partition_check": true
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "bounds": [
+        85,
+        24,
+        135,
+        94
+      ],
+      "center": [
+        153.52360451306413,
+        70.14340855106889
+      ],
+      "white_pixels": 6736,
+      "buffered_area": 7206.779401255438,
+      "mean_iou": 0.9689913465566625,
+      "area_error": 1.7258396895720977e-05
+    },
+    {
+      "rank": 2,
+      "bounds": [
+        84,
+        148,
+        135,
+        90
+      ],
+      "center": [
+        153.53221957040572,
+        191.95465393794748
+      ],
+      "white_pixels": 6704,
+      "buffered_area": 7166.828668401653,
+      "mean_iou": 0.9716159757762348,
+      "area_error": 0.005526330509465003
+    },
+    {
+      "rank": 3,
+      "bounds": [
+        204,
+        24,
+        134,
+        94
+      ],
+      "center": [
+        273.3262295081967,
+        70.53099850968704
+      ],
+      "white_pixels": 6710,
+      "buffered_area": 7176.486417226449,
+      "mean_iou": 0.9693063534178415,
+      "area_error": 0.004186215186887525
+    },
+    {
+      "rank": 4,
+      "bounds": [
+        144,
+        86,
+        134,
+        92
+      ],
+      "center": [
+        213.3198344664499,
+        131.13109665976944
+      ],
+      "white_pixels": 6766,
+      "buffered_area": 7236.60493466661,
+      "mean_iou": 0.9676542714293789,
+      "area_error": 0.00415586823791143
+    },
+    {
+      "rank": 5,
+      "bounds": [
+        204,
+        147,
+        133,
+        92
+      ],
+      "center": [
+        272.19703991628046,
+        192.7291074899088
+      ],
+      "white_pixels": 6689,
+      "buffered_area": 7150.876346945964,
+      "mean_iou": 0.9709441995120976,
+      "area_error": 0.007739884703229481
+    },
+    {
+      "rank": 6,
+      "bounds": [
+        264,
+        86,
+        134,
+        92
+      ],
+      "center": [
+        332.35301010692837,
+        131.96484546652997
+      ],
+      "white_pixels": 6827,
+      "buffered_area": 7294.443259277343,
+      "mean_iou": 0.9642788434941352,
+      "area_error": 0.012181550666517393
+    },
+    {
+      "rank": 7,
+      "bounds": [
+        27,
+        85,
+        132,
+        93
+      ],
+      "center": [
+        94.60530257639304,
+        131.12147992810065
+      ],
+      "white_pixels": 6676,
+      "buffered_area": 7136.037036193595,
+      "mean_iou": 0.9581442488976442,
+      "area_error": 0.009798996829305993
+    },
+    {
+      "rank": 8,
+      "bounds": [
+        144,
+        207,
+        134,
+        93
+      ],
+      "center": [
+        212.6164570389453,
+        252.78193665706925
+      ],
+      "white_pixels": 6599,
+      "buffered_area": 7075.526045091822,
+      "mean_iou": 0.9640330933335812,
+      "area_error": 0.018195540147106483
+    },
+    {
+      "rank": 9,
+      "bounds": [
+        263,
+        209,
+        134,
+        90
+      ],
+      "center": [
+        331.78113092516384,
+        253.0120408474318
+      ],
+      "white_pixels": 6561,
+      "buffered_area": 7021.956462177444,
+      "mean_iou": 0.9648328822951372,
+      "area_error": 0.025628889283638847
+    },
+    {
+      "rank": 10,
+      "bounds": [
+        26,
+        208,
+        133,
+        90
+      ],
+      "center": [
+        93.92117393976645,
+        252.0179778733866
+      ],
+      "white_pixels": 6508,
+      "buffered_area": 6975.145304542059,
+      "mean_iou": 0.9605672199631895,
+      "area_error": 0.03212443506276562
+    }
+  ]
+}

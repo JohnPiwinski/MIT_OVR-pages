@@ -1,0 +1,84 @@
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f8f0df;
+  background: #19130f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --gold: #d5b16f;
+  --cream: #f1e4cb;
+  --dark: #21170f;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #19130f; }
+button { font: inherit; color: inherit; }
+#app { display: grid; place-items: center; min-height: 100vh; overflow: hidden; }
+.stage { width: min(100vw, 177.7778vh); height: min(100vh, 56.25vw); position: relative; overflow: hidden; background-color: #26180f; background-position: center; background-size: 100% 100%; isolation: isolate; box-shadow: 0 20px 70px #0008; }
+.title-scene { background-image: url('../assets/library.png'); }
+.corridor-scene { background-image: url('../assets/corridor.png'); }
+.room-noether { background-image: url('../assets/noether-office.png'); }
+.room-grothendieck { background-image: url('../assets/grothendieck-office.png'); }
+.room-bezout { background-image: url('../assets/bezout-office.png'); }
+.room-hironaka { background-image: url('../assets/hironaka-office.png'); }
+.scene-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #100d0b30 0%, #120c0966 39%, #100a08a8 100%); }
+.title-mark { position: absolute; top: 17%; left: 50%; transform: translateX(-50%); width: 72%; text-align: center; color: var(--cream); text-shadow: 0 2px 22px #170d06; }
+.title-mark h1 { margin: 12px 0 0; font: italic 500 clamp(64px, 9.2vw, 142px)/.9 'Cormorant Garamond', Georgia, serif; letter-spacing: -.035em; }
+.play-button { border: 1px solid #e2c582bb; border-radius: 2px; padding: 13px 28px; background: linear-gradient(110deg,#a98245,#d3b477); color: #21170f; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; box-shadow: 0 5px 24px #130a04a0; cursor: pointer; transition: transform .2s, filter .2s; }
+.title-mark .play-button { margin-top:24px; }
+.play-button:hover { transform: translateY(-2px); filter: brightness(1.1); }
+.play-button span { padding-left: 12px; font-size: 18px; }
+.scene-header { position:absolute; z-index:5; top:4.5%; left:4%; right:4%; display:grid; grid-template-columns:1fr auto 1fr; align-items:start; text-shadow:0 2px 12px #0009; }
+.back-link { justify-self:start; border:1px solid #efdfc355; border-radius:2px; background:#1d1711b3; padding:9px 14px; color:#f4e9d5; font-size:clamp(10px,.8vw,13px); letter-spacing:.08em; cursor:pointer; backdrop-filter:blur(4px); }
+.back-link:hover { background:#c9a569; color:#23170e; }
+.header-center { text-align:center; }
+.header-center h1 { margin:7px 0 0; font:italic 500 clamp(36px,4vw,58px)/.94 'Cormorant Garamond',Georgia,serif; }
+.corridor-shade { background:linear-gradient(180deg,#150e0b8c 0%,transparent 26%,transparent 68%,#160d08b8 100%); }
+.corridor-choices { position:absolute; inset:0; }
+.door-choice { position:absolute; top:26%; width:20%; height:62%; border:0; padding:0; background:transparent; cursor:pointer; display:flex; flex-direction:column; align-items:center; }
+.door-choice.d0 { left:13%; } .door-choice.d1 { left:36.5%; } .door-choice.d2 { left:60%; } .door-choice.d3 { left:83.5%; }
+.door-choice::after { content:""; position:absolute; top:10%; bottom:0; left:12%; right:12%; background:#d7ae6530; opacity:0; transition:opacity .25s; pointer-events:none; }
+.door-choice:hover::after { opacity:1; }
+.portrait { position:absolute; top:10%; left:50%; transform:translateX(-50%); width:35%; height:32%; border:5px ridge #b98941; box-shadow:0 3px 13px #140c07; overflow:hidden; display:block; background:#33271c; }
+.portrait img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 30%; filter:sepia(.08) contrast(1.04); }
+.name-plaque { position:absolute; top:47%; left:50%; transform:translateX(-50%); width:53%; min-width:130px; padding:5px 8px 4px; background:linear-gradient(#d6b36b,#9b7136); color:#302012; border:1px solid #f0d794; box-shadow:0 2px 9px #170e08; text-align:center; display:flex; flex-direction:column; }
+.name { font:600 clamp(10px,1.05vw,15px)/1.12 'Cormorant Garamond',Georgia,serif; white-space:nowrap; }
+.corridor-arrow { position:absolute; z-index:4; top:52%; width:44px; height:56px; border:1px solid #e9d4b26b; background:#20170fc9; color:#f3e4c8; font:300 38px/1 'Cormorant Garamond',serif; cursor:pointer; }
+.corridor-arrow.left { left:1.5%; } .corridor-arrow.right { right:1.5%; }
+.corridor-arrow:disabled { opacity:.24; cursor:default; }
+.office-wash { position:absolute; inset:0; background:linear-gradient(180deg,#110b087a,transparent 25%,transparent 58%,#110a086e); z-index:-1; }
+.office-header { align-items:start; }
+.object-hotspot { position:absolute; display:flex; align-items:center; gap:9px; border:1px solid #dfc589aa; background:#21170fbf; padding:9px 13px; cursor:pointer; color:#f6ead4; box-shadow:0 4px 16px #1109047a; transition:transform .2s,background .2s; backdrop-filter:blur(3px); }
+.object-hotspot:hover { transform:translateY(-3px); background:#9c713bcf; }
+.object-icon { font-size:20px; color:#e4c47e; }
+.object-label { font-size:clamp(10px,.85vw,13px); letter-spacing:.06em; white-space:nowrap; }
+.crest-hotspot { position:absolute; top:12.4%; left:46.7%; width:10%; height:20.8%; border:0; padding:0; background:transparent; cursor:pointer; transition:box-shadow .18s,outline-color .18s; outline:2px solid transparent; outline-offset:3px; }
+.crest-hotspot:hover,.crest-hotspot:focus-visible { outline-color:#edc875; box-shadow:0 0 28px 8px #eac77699,inset 0 0 20px #f1d58c66; }
+.crest-hotspot::after { content:'Wallpaper symmetry groups'; position:absolute; left:50%; bottom:-35px; transform:translate(-50%,5px); width:max-content; max-width:180px; padding:6px 9px; border:1px solid #dfc589aa; background:#21170fe8; color:#f4e6cc; font-size:10px; letter-spacing:.06em; opacity:0; transition:opacity .18s,transform .18s; pointer-events:none; }
+.crest-hotspot:hover::after,.crest-hotspot:focus-visible::after { opacity:1; transform:translate(-50%,0); }
+.puzzle-scene { display:grid; place-items:center; }
+.puzzle-scene::before { content:""; position:absolute; inset:0; background:#120c09a6; backdrop-filter:blur(2px); z-index:-1; }
+.puzzle-back { position:absolute; top:4.5%; left:4%; z-index:2; }
+.puzzle-card { width:min(92%,620px); padding:clamp(24px,4vw,52px); background:#211810ed; border:1px solid #d8b56f8c; box-shadow:0 20px 80px #090604bb; text-align:center; }
+.puzzle-card h1 { margin:7px 0; font:italic 500 clamp(33px,4vw,52px)/1 'Cormorant Garamond',Georgia,serif; }
+.level-placeholder { margin:16px 0 0; color:#d3c3a8; font:italic 500 18px 'Cormorant Garamond',Georgia,serif; }
+.level-exercises { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:22px 0 15px; }
+.level-exercises a { display:grid; grid-template-columns:34px 1fr; column-gap:8px; align-items:center; padding:12px; border:1px solid #d8b56f88; background:#18120dbb; color:#f1e4cb; text-align:left; text-decoration:none; }
+.level-exercises a:hover { background:#49331f; border-color:#efd38f; }
+.level-exercises span { grid-row:span 2; color:#d0ac68; font:700 11px 'DM Sans',sans-serif; letter-spacing:.1em; }
+.level-exercises strong { font:600 21px/1 'Cormorant Garamond',Georgia,serif; }
+.level-exercises small { margin-top:4px; color:#d3c3a8; font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
+.matching-link { color:#e1c27e; font-size:12px; letter-spacing:.05em; }
+@media(max-width:600px) { .level-exercises { grid-template-columns:1fr; } }
+@media (max-width:700px) {
+  .title-mark { top:22%; width:90%; }
+  .title-mark h1 { font-size:clamp(58px,14vw,92px); }
+  .scene-header { top:3%; left:3%; right:3%; }
+  .header-center h1 { font-size:clamp(25px,6vw,39px); }
+  .door-choice { top:31%; width:22%; height:58%; }
+  .door-choice.d0 { left:8%; } .door-choice.d1 { left:31.5%; } .door-choice.d2 { left:55%; } .door-choice.d3 { left:78.5%; }
+  .portrait { width:37%; height:26%; border-width:3px; top:7%; }
+  .name-plaque { top:37%; min-width:0; width:75%; padding:4px 2px; }
+  .name { font-size:clamp(8px,1.4vw,11px); }
+  .corridor-arrow { width:30px; height:40px; font-size:27px; }
+  .crest-hotspot { top:12.4%; left:46.7%; width:10%; height:20.8%; }
+}
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }

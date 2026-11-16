@@ -1,0 +1,25 @@
+*{box-sizing:border-box}
+:root{font-family:'DM Sans',Arial,sans-serif;color:#f1e4cb;background:#21170f;font-synthesis:none;text-rendering:optimizeLegibility}
+body{min-height:100vh;margin:0;background:radial-gradient(ellipse at 50% 0%,#49331f 0,#2a1e14 43%,#1b140f 100%)}
+main{width:min(1100px,calc(100% - 40px));margin:0 auto;padding:34px 0 28px}
+a{color:#e1c27e}header>a{font-size:.9rem;text-decoration:none}header>a:hover{color:#fff0c9}
+.stamp,.eyebrow{color:#d0ac68;font-size:.7rem;font-weight:700;letter-spacing:.18em}
+.stamp{margin-top:34px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+h1{margin:4px 0 0;font-size:clamp(3rem,7vw,5rem);font-style:italic;line-height:.95}
+.intro{margin:12px 0 28px;color:#d3c3a8;font:italic 500 1.3rem 'Cormorant Garamond',Georgia,serif}
+.questions{padding:24px;background:#211810ed;border:1px solid #d8b56f99;box-shadow:0 16px 48px #09060488,inset 0 0 0 7px #211810,inset 0 0 0 8px #d8b56f55}
+.section-heading h2,.matching-entry h2{margin:3px 0;font-size:clamp(2rem,4vw,2.8rem);font-style:italic}
+.section-heading p,.exercise-card p,.matching-entry p{color:#d3c3a8;line-height:1.55}
+.section-heading p{max-width:760px;margin:4px 0 18px}
+.exercise-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.exercise-card{padding:18px;background:#2b2016;border:1px solid #9e7941;box-shadow:0 5px 14px #0a070499}
+.card-number{color:#d0ac68;font-size:.68rem;font-weight:700;letter-spacing:.15em}
+.exercise-card h3{margin:1px 0 0;color:#f3e8d2;font-size:1.8rem}
+.exercise-card p{min-height:3.2em;margin:3px 0 16px}
+.gold-button{display:inline-block;padding:10px 14px;border:1px solid #efd38f;background:linear-gradient(110deg,#a98245,#d3b477);color:#21170f;font-size:.86rem;font-weight:700;text-decoration:none;box-shadow:0 3px 10px #100a0555}
+.gold-button:hover{filter:brightness(1.1)}
+.matching-entry{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:18px;padding:20px 24px;background:#18120d;border:1px solid #a88143}
+.matching-entry h2{font-size:2rem}.matching-entry p{margin:2px 0 0}.matching-entry .gold-button{flex:none}
+footer{margin-top:22px;color:#b8975d;font-size:.68rem;font-weight:700;letter-spacing:.2em;text-align:center}footer span{padding:0 8px;color:#ead8b7}
+@media(max-width:650px){main{width:min(100% - 24px,520px);padding:20px 0}.exercise-cards{grid-template-columns:1fr}.exercise-card p{min-height:0}.matching-entry{align-items:start;flex-direction:column;gap:10px;padding:16px}}
