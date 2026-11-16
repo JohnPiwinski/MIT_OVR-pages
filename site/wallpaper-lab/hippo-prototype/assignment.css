@@ -76,3 +76,6 @@ button.group-chip:first-child{background:linear-gradient(110deg,#a98245,#d3b477)
 .boundary-controls label:first-of-type{color:#245c66}.boundary-controls label:last-of-type{color:#8e3f34}
 .boundary-controls input{accent-color:#9a7135}
 @media(max-width:720px){.boundary-controls{gap:8px 14px}}
+
+.assignment-shell .pattern-pick button:not(#pick-hippo):not(#pick-fleur){display:none!important}
+.assignment-shell .pattern-pick{max-height:none;overflow:visible}
