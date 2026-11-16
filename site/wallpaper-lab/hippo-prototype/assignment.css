@@ -49,3 +49,30 @@ button.group-chip:first-child{background:linear-gradient(110deg,#a98245,#d3b477)
 .special-exercises button{font-weight:700}
 .board-actions button:first-child{background:linear-gradient(110deg,#a98245,#d3b477);color:#21170f;border-color:#efd38f}
 @media(prefers-reduced-motion:reduce){.group-chip,.pattern-card,.board-actions button{transition:none}}
+
+/* The M.5 exercise uses the same walnut, brass, and readable book-page palette as the library. */
+.assignment-shell aside{background:#241a12;color:#f1e4cb;border-color:#9e7941;box-shadow:0 10px 28px #08060488,inset 0 0 0 5px #211810}
+.assignment-shell aside:before{border-color:#d8b56f66}
+.assignment-shell aside h2,.assignment-shell aside p,.assignment-shell aside .fine{color:#e4d5b8}
+.assignment-shell aside .card-label{color:#d8b56f}
+.assignment-shell aside .pattern-pick button{background:#302317;color:#f1e4cb;border:1px solid #85663a}
+.assignment-shell aside .pattern-pick button[aria-pressed=true]{background:linear-gradient(110deg,#a98245,#d3b477);color:#21170f;border-color:#efd38f}
+.assignment-shell aside #stages button{color:#d6c19b;border-left-color:#8f6b3d}
+.assignment-shell aside #stages button span{color:#f1e4cb}
+.assignment-shell aside #stages button[aria-current=step]{color:#21170f;background:#d3b477;border-left-color:#f2dda9}
+.assignment-shell .desk{background:#fbf7ed;color:#352b20;border:1px solid #d8b56f;box-shadow:0 12px 32px #09060499,inset 0 0 0 5px #f1e8d5}
+.desk .titleline h2{font-family:'Cormorant Garamond',Georgia,serif;color:#352b20;font-size:clamp(1.8rem,3.2vw,2.5rem)}
+.desk .eyebrow{color:#88652e}
+.desk #stage-intro,.desk .stage-panel,.desk .stage-panel p,.desk .stage-panel label,.desk .stage-panel summary,.desk .caption,.desk .fine{color:#4c4236}
+.desk .tag{background:#e1e8d9;color:#354c39;border-color:#a6b69b;font-family:'DM Sans',Arial,sans-serif}
+.desk .stage{background:#f2ead9;border-color:#c6b28e}
+.desk button{font-family:'DM Sans',Arial,sans-serif;background:#eee5d4;color:#3a3025;border-color:#ad956d}
+.desk .buttons button:first-child,.desk #check-tile,.desk #reveal-tile,.desk #check-order,.desk #reveal-order,.desk #play{background:linear-gradient(110deg,#a98245,#d3b477);color:#21170f;border-color:#c5a05a}
+.desk button[aria-pressed=true]{background:#d3b477;color:#21170f;border-color:#a98245}
+.desk input[type=number],.desk select{color:#30291f;background:#fffdf8;border-color:#a98c5f}
+.desk details{color:#4c4236}.desk details summary{color:#725122;font-weight:700;cursor:pointer}
+.boundary-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 14px;padding:10px 12px;background:#f0e7d5;border:1px solid #c8b38b;color:#3d3429;font-size:.9rem}
+.boundary-controls label{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.boundary-controls label:first-of-type{color:#245c66}.boundary-controls label:last-of-type{color:#8e3f34}
+.boundary-controls input{accent-color:#9a7135}
+@media(max-width:720px){.boundary-controls{gap:8px 14px}}
